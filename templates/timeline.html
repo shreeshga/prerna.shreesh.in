@@ -14,7 +14,8 @@
           <a class="brand" href="{{url_for('index')}}">Prerna&amp;Shreesh</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li><a href="{{url_for('index')}}">Wedding</a></li>
+              <li><a href="{{url_for('index')}}">Home</a></li>
+              <li><a href="{{url_for('wedding')}}">Wedding</a></li>
               <li  class="active"><a href="{{url_for('timeline')}}">TimeLine</a></li>
               <li><a href="{{url_for('contact')}}">Contact</a></li>
             </ul>
@@ -25,22 +26,11 @@
     <div class="container">
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit">
-        <h2>Wedding!</h2>
+        <h2>Timeline</h2>
         <iframe src='http://embed.verite.co/timeline/?source=0AtNxSwigiymodHR5ZEFnOUN0T3ZhUWJNRWEzTXFJemc&font=DroidSerif-DroidSans&maptype=toner&lang=en&width=1024&height=500' width='1024' height='650' frameborder='0'></iframe>
       </div>
-    </div>
-{% endblock %}
-{% block bootstrap_js_bottom %}
-  {{super()}}
-   <!-- BEGIN Timeline Embed -->
 
-  <script type="text/javascript">
-  var timeline_config = {
-   width: "100%",
-   height: "100%",
-   source: 'https://docs.google.com/spreadsheet/pub?key=0Agl_Dv6iEbDadHdKcHlHcTB5bzhvbF9iTWwyMmJHdkE&amp;output=html'
-  }
-  </script>
-  <script type="text/javascript" src="../compiled/js/storyjs-embed.js"></script>
+      <blockquote>Marriage is an adventure, like going to war.</blockquote>
+    </div>
 {% endblock %}
 

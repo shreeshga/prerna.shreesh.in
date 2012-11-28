@@ -13,6 +13,10 @@ app.config['BOOTSTRAP_USE_CDN'] = True
 def index():
     return render_template('home.html')
 
+@app.route('/wedding')
+def wedding():
+    return render_template('wedding.html')
+
 @app.route('/timeline')
 def timeline():
     return render_template('timeline.html')
