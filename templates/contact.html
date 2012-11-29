@@ -22,13 +22,53 @@
         </div>
       </div>
     </div>
-    <div class="container">
-      <!-- Main hero unit for a primary marketing message or call to action -->
-      <div class="hero-unit">
-        <h2>Contact</h2>
-            
-        </div>
 
-        <blockquote>In my house I’m the boss, my wife is just the decision maker.</blockquote>
+ <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="{{url_for('static', filename='img/scan2_0001.jpg')}}" alt="">
+        </div>
+        <div class="item">
+          <img src="{{url_for('static', filename='img/scan2_0002.jpg')}}" alt="">
+        </div>
+        <div class="item">
+          <img src="{{url_for('static', filename='img/scan2_0031.jpg')}}" alt="">
+        </div>
+        <div class="item">
+          <img src="{{url_for('static', filename='img/scan2_0032.jpg')}}" alt="">
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div><!-- /.carousel -->
+
+
+
+  <div class="continer">
+    <div class="row-fluid">
+      <div class="span4"> 
+        <h4>Reception Venue:</h4>
+        <address>
+          <strong> Vasudev Adiga's</strong> <br>
+          #1265/6, 23rd Main,<br>
+          KHB colony (Behind KHB Bus Stop),<br>
+          Magadi Road,<br>
+          Bangalore<br>
+        </address>   
+      </div>
+      <div class="span4"> 
+          <strong>Shreesh</strong> <br>
+          <a href="mailto:shreesh.ayachit@gmail.com">Gmail</a> <br>
+          <a href="tel:9986036838">996036838</a>
+      </div>
+
+      <div class="span4"> 
+          <strong>Prerna Keshari</strong><br>
+          <a href="mailto:rose.friendly@gmail.com">Gmail</a> <br>
+          <a href="tel:9739669313">9739669313</a> <br>
+      </div>
     </div>
+  </div>
 {% endblock %}
