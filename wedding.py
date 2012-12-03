@@ -21,7 +21,6 @@ def wedding():
 def timeline():
     return render_template('timeline.html')
 
-
 @app.route('/contact')
 def contact():
     return render_template('contact.html')
