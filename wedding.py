@@ -4,9 +4,12 @@
 from flask import Flask, render_template
 from flask.ext.bootstrap import Bootstrap
 
+TIMELINEJS_FOLDER = 'lib/TimelineJS/compiled/js/'
+
 app = Flask(__name__)
 Bootstrap(app)
 app.config['BOOTSTRAP_USE_CDN'] = True
+app.config['TIMELINEJS_FOLDER'] = TIMELINEJS_FOLDER
 
 
 @app.route('/')
@@ -24,6 +27,7 @@ def timeline():
 @app.route('/contact')
 def contact():
     return render_template('contact.html')
+
 
 @app.errorhandler(404)
 def page_not_found(e):
