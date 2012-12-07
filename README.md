@@ -1,4 +1,6 @@
-prerna.shreesh.in
-=================
+My Wedding Site
+===============
 
-wedding site
+Created with Flask, bootstrap and TimlineJS
+
+http://prerna.shreesh.in
