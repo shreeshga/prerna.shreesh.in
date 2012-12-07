@@ -24,18 +24,27 @@
     </div>
     <!-- Carousel
     ================================================== -->
-    <div id="myCarousel" class="carousel slide">
+    <!--   <div id="myCarousel" class="carousel slide">
       <div class="carousel-inner">
         <div class="item active">
           <img src="{{url_for('static', filename='img/card.jpg')}}" alt="">
         </div>
-     </div>
+      </div> -->
      <!--      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a> -->
     </div><!-- /.carousel -->
     <div class="container">
       <div class="hero-unit">
         <h3>Wedding Events</h3>
+    <div class="row-fluid">
+       <div class="span2"> 
+          <div class="media">
+            <a class="pull-left" href="#">
+              <img class="media-object" src="{{url_for("static",filename="img/ganesh.png")}}">
+            </a>
+          </div>
+      </div> 
+       <div class="span8"> 
           <dl class="dl-horizontal">
             <dt>Sangeet</dt>
             <dd>[Song n' Dance] Dec 26th 7pm</dd>
@@ -48,6 +57,16 @@
             <dt>Reception</dt>
             <dd>Jan 1st 7pm</dd>
           </dl>
+        </div>
+        <div class="span2"> 
+          <div class="media">
+            <a class="pull-left" href="#">
+              <img class="media-object" src="{{url_for("static",filename="img/design.png")}}">
+            </a>
+          </div>
+      </div> 
+
+    </div>
           <hr>
     <div class="row-fluid">
        <div class="span6"> 
