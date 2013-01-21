@@ -1,10 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import os
 from flask import Flask, render_template
-from flask.ext.bootstrap import Bootstrap
+from flask_bootstrap import Bootstrap
 
 TIMELINEJS_FOLDER = 'lib/TimelineJS/compiled/js/'
+NORMAL_GALLERY_FOLDER = 'static/wedding_gallery/normal'
+THUMB_GALLERY_FOLDER = 'static/wedding_gallery/thumb'
 
 app = Flask(__name__)
 Bootstrap(app)
@@ -23,6 +26,12 @@ def wedding():
 @app.route('/timeline')
 def timeline():
     return render_template('timeline.html')
+
+@app.route('/gallery')
+def gallery():
+    normal = [os.path.join(NORMAL_GALLERY_FOLDER,x) for x in os.listdir(NORMAL_GALLERY_FOLDER)]
+    thumb = [os.path.join(THUMB_GALLERY_FOLDER,x) for x in os.listdir(THUMB_GALLERY_FOLDER)]
+    return render_template('gallery.html',normal= normal,thumb=thumb,zip =zip)
 
 @app.route('/contact')
 def contact():
