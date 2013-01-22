@@ -37,10 +37,17 @@
   Galleria.loadTheme("{{url_for('static', filename='css/classic/galleria.classic.min.js')}}");
 Galleria.run('#galleria', {
   height: 0.5,
-  transition: 'fade',
+  transition: 'slide',
   imagecrop: true,
-  clicknext: true  
+  clicknext: true,  
+   trueFullscreen: true,
+fullscreenDoubleTap : true
 });
-
+Galleria.ready(function() {
+  var gallery = this; // galleria is ready and the gallery is assigned
+  $('#fullscreen').click(function() {
+    gallery.toggleFullscreen(); // toggles the fullscreen
+  });
+});
 </script>
 {% endblock %}
