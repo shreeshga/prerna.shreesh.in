@@ -1,7 +1,5 @@
 {% extends "bootstrap_responsive.html" %}
 
-{%block meta %}
-{% endblock %}
 {% block body_content %}
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
@@ -17,6 +15,7 @@
               <li><a href="{{url_for('index')}}">Home</a></li>
               <li><a href="{{url_for('wedding')}}">Wedding</a></li>
               <li  class="active"><a href="{{url_for('timeline')}}">TimeLine</a></li>
+              <li><a href="{{url_for('gallery')}}">Gallery</a></li>
               <li><a href="{{url_for('contact')}}">Contact</a></li>
             </ul>
           </div><!--/.nav-collapse -->
