@@ -32,6 +32,8 @@ def gallery():
    THUMB_GALLERY_FOLDER = os.path.join(APP_DIR,'static/wedding_gallery/thumb/')
    normal = [os.path.join('/normal/',x) for x in os.listdir(NORMAL_GALLERY_FOLDER)]
    thumb = [os.path.join('/thumb/',x) for x in os.listdir(THUMB_GALLERY_FOLDER)]
+   normal = sorted(normal)
+   thumb = sorted(thumb)
    return render_template('gallery.html',normal= normal,thumb=thumb,zip =zip)
 
 @app.route('/contact')
