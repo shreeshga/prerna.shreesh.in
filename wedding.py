@@ -6,8 +6,7 @@ from flask import Flask, render_template
 from flask_bootstrap import Bootstrap
 
 TIMELINEJS_FOLDER = 'lib/TimelineJS/compiled/js/'
-NORMAL_GALLERY_FOLDER = 'static/wedding_gallery/normal'
-THUMB_GALLERY_FOLDER = 'static/wedding_gallery/thumb'
+APP_DIR = os.path.dirname(os.path.abspath(__file__))
 
 app = Flask(__name__)
 Bootstrap(app)
@@ -29,9 +28,11 @@ def timeline():
 
 @app.route('/gallery')
 def gallery():
-    normal = [os.path.join(NORMAL_GALLERY_FOLDER,x) for x in os.listdir(NORMAL_GALLERY_FOLDER)]
-    thumb = [os.path.join(THUMB_GALLERY_FOLDER,x) for x in os.listdir(THUMB_GALLERY_FOLDER)]
-    return render_template('gallery.html',normal= normal,thumb=thumb,zip =zip)
+   NORMAL_GALLERY_FOLDER = os.path.join(APP_DIR,'static/wedding_gallery/normal/')
+   THUMB_GALLERY_FOLDER = os.path.join(APP_DIR,'static/wedding_gallery/thumb/')
+   normal = [os.path.join('/normal/',x) for x in os.listdir(NORMAL_GALLERY_FOLDER)]
+   thumb = [os.path.join('/thumb/',x) for x in os.listdir(THUMB_GALLERY_FOLDER)]
+   return render_template('gallery.html',normal= normal,thumb=thumb,zip =zip)
 
 @app.route('/contact')
 def contact():
